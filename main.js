@@ -18,9 +18,8 @@ $(document).ready(function () {
         }
         return false;
     });
-    $(".reserved").click(function () {
-        alert("");
-    });
+    
+        
     $("#reserve").click(function (event) {
         event.preventDefault();
         var name = $("#name").val();

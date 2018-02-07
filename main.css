@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500i,900,900i");
 body {
     background-color: #E1D7D4;
 }
@@ -9,12 +10,24 @@ p {
     text-align: center;
     margin-top: 50px;
 }
-
+#header p {
+    padding: 5px;
+    margin: 0;
+    padding-bottom: 30px;
+}
 h1 {
     color: #E34E45;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik";
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-
+h2 {
+    color: #E34E45;
+    font-family: "Rubik";
+    font-weight: 700;
+}
 #tables {
     width: 300px;
     height: 300px;
@@ -36,9 +49,11 @@ h1 {
 }
 .available {
     background-color: #EEE;
+    cursor: pointer;
 }
 .reserved {
     background-color: #ADAAAA;
+    cursor: not-allowed;
 }
 
 .available > p {
@@ -68,6 +83,9 @@ h1 {
     margin-top: 10px;
     padding: 40px;
 }
+.material-icons.gray { 
+    color: #ADAAAA; 
+}
 #exit {
     position: absolute;
     right: 10px;
@@ -75,6 +93,7 @@ h1 {
     background-color: white;
     border: none;
     font-size:1.2em;
+    cursor: pointer;
 }
 form {
     display: flex;
@@ -95,6 +114,7 @@ input {
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
     padding: 15px 0;
     margin-top: 20px;
+    cursor: pointer;
 }
 span {
     display: none;
@@ -111,4 +131,50 @@ span p {
     margin: 0;
     white-space: nowrap;
     color:black;
+}
+@media screen and (max-width: 361px){
+    #header {
+        text-align: center;
+        margin-top: 40px;
+    }
+        
+    #tables {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .table {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .available > p {
+        position: relative;
+        top: 50%;
+        left: 45%;
+        transform: translateY(-50%);
+    }
+    
+    .reserved > p {
+        position: relative;
+        top: 50%;
+        left: 45%;
+        transform: translateY(-50%);
+    }
+    
+    #resForm {
+        width: 80%;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+        padding: 20px;
+    }    
+    span {
+        width: 135px;
+    }
+    span p {
+        font-size: .8em;
+    }
 }

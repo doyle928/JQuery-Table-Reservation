@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="inputmask.binding.js"></script>
+    <script src="inputmask.phone.extensions.js"></script>
+    <script src="jquery.inputmask.js"></script>
+</head>
+
 <body>
     <div id="header">
         <h1>Table Finder</h1>
@@ -16,36 +22,58 @@
     </div>
     <div id="tables">
         <div class="container1">
-            <div id="table1" class="table available"><p>1</p></div>
-            <div id="table4" class="table available"><p>4</p></div>
-            <div id="table7" class="table available"><p>7</p></div>
+            <div id="table1" class="table available">
+                <p>1</p>
+            </div>
+            <div id="table4" class="table available">
+                <p>4</p>
+            </div>
+            <div id="table7" class="table available">
+                <p>7</p>
+            </div>
         </div>
         <div class="container2">
-            <div id="table2" class="table available"><p>2</p></div>
-            <div id="table5" class="table available"><p>5</p></div>
-            <div id="table8" class="table available"><p>8</p></div>
+            <div id="table2" class="table available">
+                <p>2</p>
+            </div>
+            <div id="table5" class="table available">
+                <p>5</p>
+            </div>
+            <div id="table8" class="table available">
+                <p>8</p>
+            </div>
         </div>
         <div class="container3">
-            <div id="table3" class="table available"><p>3</p></div>
-            <div id="table6" class="table available"><p>6</p></div>
-            <div id="table9" class="table available"><p>9</p></div>
+            <div id="table3" class="table available">
+                <p>3</p>
+            </div>
+            <div id="table6" class="table available">
+                <p>6</p>
+            </div>
+            <div id="table9" class="table available">
+                <p>9</p>
+            </div>
+        </div>
+        <div id="resForm">
+            <button id="exit" type="button">
+                <i class="material-icons gray">close</i>
+            </button>
+            <form id="form">
+                <h2>New Reservation</h2>
+                <p></p>
+                <input type="text" id="name" required/>
+                <!-- <i class="material-icons name gray">check</i> -->
+                <input type="text" id="phone" data-inputmask="'mask': '(999) 999-9999'" required/>
+                <!-- <i class="material-icons phone gray">check</i> -->
+                <input type="number" id="resSize" required/>
+                <!-- <i class="material-icons party gray">check</i> -->
+                <button id="reserve" type="">Reserve</button>
+            </form>
+        </div>
     </div>
-    <div id="resForm"> 
-        <button id="exit" type="button">X</button>
-        <form id="form">
-            <h1>New Reservation</h1>
-            <p></p>
-            <input type="text" id="name" placeholder="Name" />
-            <input type="tel" id="phone" placeholder="123-4567-8901" minlength="9" maxlength="14"/>
-            <input type="number" id="resSize"  required/>
-            <button id="reserve" type="">Reserve</button>
-        </form>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="jquery-3.3.1.js"></script>
     <script src="main.js"></script>
-    
+
 </body>
 
 </html>
